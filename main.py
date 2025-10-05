@@ -99,9 +99,23 @@ def main():
     parser.add_argument("--host", help="Server host address")
     parser.add_argument("--port", type=int, help="Server port")
     parser.add_argument("--proxy-file", help="Path to proxy list file")
+    parser.add_argument("--menu", action="store_true", help="Launch menu system")
     
     args = parser.parse_args()
     
+    if args.menu:
+        # Launch menu system
+        try:
+            from menu_system import main_menu
+            main_menu()
+        except ImportError:
+            print("Menu system not available. Running in command line mode.")
+            run_command_line(args)
+    else:
+        run_command_line(args)
+
+def run_command_line(args):
+    """Run in traditional command line mode"""
     # Create Rota instance
     rota = Rota(args.config)
     

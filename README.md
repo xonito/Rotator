@@ -1,6 +1,8 @@
-# Rota 🚀
+# Rota + Proxytron3000 🚀
 
-**Lightning-fast, self-hosted proxy rotation powerhouse**
+**Sistema Integrado de Gestión y Búsqueda de Proxies**
+
+Sistema completo que combina el poder de rotación de proxies de **Rota** con la capacidad de búsqueda automática de **Proxytron3000**. Ahora puedes buscar, validar y rotar proxies todo en una sola plataforma.
 
 Rota is a high-performance proxy rotation server that revolutionizes how you manage and rotate proxies. Built with performance at its core, this robust tool handles thousands of requests per second while seamlessly rotating IPs to maintain your anonymity.
 
@@ -52,7 +54,10 @@ Rota is a high-performance proxy rotation server that revolutionizes how you man
 ### Basic Usage
 
 ```bash
-# Start with default configuration
+# Iniciar con sistema de menús (RECOMENDADO)
+python main.py --menu
+
+# Modo línea de comandos tradicional
 python main.py
 
 # Start with custom config file
@@ -64,6 +69,37 @@ python main.py --host 0.0.0.0 --port 9090
 # Use specific proxy file
 python main.py --proxy-file my_proxies.txt
 ```
+
+### 🎯 Sistema de Menús Integrado
+
+El sistema ahora incluye un menú interactivo con las siguientes opciones:
+
+1. **🔍 Buscar nuevos proxies** - Utiliza Proxytron3000 para encontrar proxies en:
+   - GitHub (repositorios con listas de proxies)
+   - Sitios web especializados
+   - Búsqueda completa
+
+2. **🚀 Iniciar servidor proxy** - Inicia Rota con diferentes opciones:
+   - Puerto 8080
+   - Puerto 8081  
+   - Puerto personalizado
+   - Ver estado del servidor
+   - Detener servidor
+
+3. **👀 Ver proxies actuales** - Muestra los proxies cargados actualmente
+
+4. **⚙️ Configuración del sistema** - Gestión de configuración:
+   - Ver configuración actual
+   - Editar configuración
+   - Restaurar valores por defecto
+
+### 🆕 Funcionalidades de Proxytron3000 Integradas
+
+- **Búsqueda en GitHub**: Analiza repositorios conocidos con listas de proxies
+- **Scraping web**: Extrae proxies de sitios especializados
+- **Validación automática**: Chequea la conectividad de los proxies encontrados
+- **Exportación múltiple**: Guarda en formato TXT y Excel
+- **IPVanish integration**: Búsqueda específica de servidores IPVanish
 
 ## 📋 Configuration
 
