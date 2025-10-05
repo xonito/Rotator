@@ -102,3 +102,4 @@
 2025-10-05 21:12:11,923 - rota.proxy_manager - INFO - Proxy http://8.211.195.173:100 is healthy (response time: 6.249s)
 2025-10-05 21:12:15,511 - rota.proxy_manager - INFO - Proxy http://8.211.194.85:193 is healthy (response time: 3.479s)
 2025-10-05 21:12:16,156 - rota.proxy_manager - INFO - Proxy http://35.243.0.245:10080 is healthy (response time: 0.596s)
+2025-10-05 21:23:04,692 - rota.proxy_manager - INFO - Proxy socks4://142.54.237.34:4145 is healthy (response time: 0.702s)
