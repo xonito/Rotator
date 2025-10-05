@@ -1,0 +1,32 @@
+# Rota Proxy Rotation Server Configuration
+
+server:
+  host: "127.0.0.1"
+  port: 8080
+  max_connections: 1000
+  connection_timeout: 30
+
+proxy:
+  files:
+    - "proxies.txt"
+  rotation_strategy: "random"  # random, roundrobin, least_conn, time_based
+  max_proxy_age: 3600  # 1 hour in seconds
+  check_interval: 300  # 5 minutes
+
+health_check:
+  enabled: true
+  url: "http://httpbin.org/ip"
+  timeout: 10
+  interval: 60  # 1 minute
+
+rate_limit:
+  enabled: true
+  requests_per_minute: 100
+  burst_capacity: 50
+
+logging:
+  level: "INFO"
+  file: "rota.log"
+
+file_monitor:
+  interval: 30  # seconds

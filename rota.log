@@ -1,0 +1,104 @@
+2025-10-05 12:24:06,117 - rota.proxy_manager - INFO - Loaded 23299 proxies from proxies.txt
+2025-10-05 12:24:06,146 - __main__ - ERROR - Failed to start Rota: unhashable type: 'Proxy'
+2025-10-05 12:25:38,051 - rota.proxy_manager - INFO - Loaded 23299 proxies from proxies.txt
+2025-10-05 17:58:14,108 - rota.proxy_manager - INFO - Loaded 5 proxies from proxies.txt
+2025-10-05 17:58:14,108 - rota.proxy_manager - INFO - Starting comprehensive health check on all proxies...
+2025-10-05 17:58:14,224 - rota.proxy_manager - INFO - Health check progress: 20.0% (1/5)
+2025-10-05 17:58:14,333 - rota.proxy_manager - INFO - Health check progress: 40.0% (2/5)
+2025-10-05 17:58:14,442 - rota.proxy_manager - INFO - Health check progress: 60.0% (3/5)
+2025-10-05 17:58:14,444 - rota.proxy_manager - INFO - Health check progress: 80.0% (4/5)
+2025-10-05 17:58:14,444 - rota.proxy_manager - INFO - Health check progress: 100.0% (5/5)
+2025-10-05 17:58:14,444 - rota.proxy_manager - INFO - Comprehensive health check completed. 0/5 proxies healthy
+2025-10-05 17:58:14,444 - rota.proxy_manager - WARNING - No healthy proxies found! The server may not function properly.
+2025-10-05 17:58:14,448 - __main__ - ERROR - Failed to start Rota: name 'Proxy' is not defined
+2025-10-05 19:27:06,934 - rota.proxy_manager - INFO - Loaded 5 proxies from proxies.txt
+2025-10-05 19:27:06,935 - rota.proxy_manager - INFO - Starting comprehensive health check on all proxies...
+2025-10-05 19:27:06,940 - rota.proxy_manager - INFO - Health check progress: 20.0% (1/5)
+2025-10-05 19:27:06,943 - rota.proxy_manager - INFO - Health check progress: 40.0% (2/5)
+2025-10-05 19:27:06,945 - rota.proxy_manager - INFO - Health check progress: 60.0% (3/5)
+2025-10-05 19:27:06,946 - rota.proxy_manager - INFO - Health check progress: 80.0% (4/5)
+2025-10-05 19:27:06,947 - rota.proxy_manager - INFO - Health check progress: 100.0% (5/5)
+2025-10-05 19:27:06,947 - rota.proxy_manager - INFO - Comprehensive health check completed. 0/5 proxies healthy
+2025-10-05 19:27:06,947 - rota.proxy_manager - WARNING - No healthy proxies found! The server may not function properly.
+2025-10-05 19:27:06,951 - __main__ - ERROR - Failed to start Rota: str, bytes or bytearray expected, not NoneType
+2025-10-05 19:43:54,105 - rota.proxy_manager - INFO - Loaded 5 proxies from proxies.txt
+2025-10-05 19:43:54,105 - rota.proxy_manager - INFO - Starting comprehensive health check on all proxies...
+2025-10-05 19:43:54,113 - rota.proxy_manager - INFO - Health check progress: 20.0% (1/5)
+2025-10-05 19:43:54,116 - rota.proxy_manager - INFO - Health check progress: 40.0% (2/5)
+2025-10-05 19:43:54,119 - rota.proxy_manager - INFO - Health check progress: 60.0% (3/5)
+2025-10-05 19:43:54,119 - rota.proxy_manager - INFO - Health check progress: 80.0% (4/5)
+2025-10-05 19:43:54,120 - rota.proxy_manager - INFO - Health check progress: 100.0% (5/5)
+2025-10-05 19:43:54,120 - rota.proxy_manager - INFO - Comprehensive health check completed. 0/5 proxies healthy
+2025-10-05 19:43:54,120 - rota.proxy_manager - WARNING - No healthy proxies found! The server may not function properly.
+2025-10-05 19:43:54,122 - __main__ - ERROR - Failed to start Rota: [WinError 10013] Intento de acceso a un socket no permitido por sus permisos de acceso
+2025-10-05 19:45:12,160 - rota.proxy_manager - INFO - Loaded 5 proxies from proxies.txt
+2025-10-05 19:45:12,160 - rota.proxy_manager - INFO - Starting comprehensive health check on all proxies...
+2025-10-05 19:45:12,166 - rota.proxy_manager - INFO - Health check progress: 20.0% (1/5)
+2025-10-05 19:45:12,169 - rota.proxy_manager - INFO - Health check progress: 40.0% (2/5)
+2025-10-05 19:45:12,171 - rota.proxy_manager - INFO - Health check progress: 60.0% (3/5)
+2025-10-05 19:45:12,172 - rota.proxy_manager - INFO - Health check progress: 80.0% (4/5)
+2025-10-05 19:45:12,172 - rota.proxy_manager - INFO - Health check progress: 100.0% (5/5)
+2025-10-05 19:45:12,172 - rota.proxy_manager - INFO - Comprehensive health check completed. 0/5 proxies healthy
+2025-10-05 19:45:12,172 - rota.proxy_manager - WARNING - No healthy proxies found! The server may not function properly.
+2025-10-05 19:45:12,174 - rota.server - INFO - Proxy server started on 127.0.0.1:8081
+2025-10-05 19:45:12,174 - __main__ - INFO - Rota server started on 127.0.0.1:8081
+2025-10-05 19:45:12,174 - __main__ - INFO - Rotation strategy: RotationStrategy.RANDOM
+2025-10-05 19:45:12,175 - __main__ - ERROR - Failed to start Rota: 'ProxyManager' object has no attribute 'get_active_proxies'
+2025-10-05 19:58:12,384 - rota.proxy_manager - INFO - Loaded 5 proxies from proxies.txt
+2025-10-05 19:58:12,384 - rota.proxy_manager - INFO - Starting comprehensive health check on all proxies...
+2025-10-05 19:58:12,390 - rota.proxy_manager - INFO - Health check progress: 20.0% (1/5)
+2025-10-05 19:58:12,392 - rota.proxy_manager - INFO - Health check progress: 40.0% (2/5)
+2025-10-05 19:58:12,394 - rota.proxy_manager - INFO - Health check progress: 60.0% (3/5)
+2025-10-05 19:58:12,395 - rota.proxy_manager - INFO - Health check progress: 80.0% (4/5)
+2025-10-05 19:58:12,395 - rota.proxy_manager - INFO - Health check progress: 100.0% (5/5)
+2025-10-05 19:58:12,396 - rota.proxy_manager - INFO - Comprehensive health check completed. 0/5 proxies healthy
+2025-10-05 19:58:12,396 - rota.proxy_manager - WARNING - No healthy proxies found! The server may not function properly.
+2025-10-05 19:58:12,397 - rota.server - INFO - Proxy server started on 127.0.0.1:8081
+2025-10-05 19:58:12,397 - __main__ - INFO - Rota server started on 127.0.0.1:8081
+2025-10-05 19:58:12,398 - __main__ - INFO - Rotation strategy: RotationStrategy.RANDOM
+2025-10-05 19:58:12,398 - __main__ - INFO - Active proxies: 0/5
+2025-10-05 19:58:12,398 - __main__ - ERROR - Failed to start Rota: 'ProxyServer' object has no attribute 'serve_forever'
+2025-10-05 20:11:47,688 - rota.proxy_manager - INFO - Loaded 5 proxies from proxies.txt
+2025-10-05 20:11:47,688 - rota.proxy_manager - INFO - Starting comprehensive health check on all proxies...
+2025-10-05 20:11:47,696 - rota.proxy_manager - INFO - Health check progress: 20.0% (1/5)
+2025-10-05 20:11:47,699 - rota.proxy_manager - INFO - Health check progress: 40.0% (2/5)
+2025-10-05 20:11:47,701 - rota.proxy_manager - INFO - Health check progress: 60.0% (3/5)
+2025-10-05 20:11:47,702 - rota.proxy_manager - INFO - Health check progress: 80.0% (4/5)
+2025-10-05 20:11:47,702 - rota.proxy_manager - INFO - Health check progress: 100.0% (5/5)
+2025-10-05 20:11:47,702 - rota.proxy_manager - INFO - Comprehensive health check completed. 0/5 proxies healthy
+2025-10-05 20:11:47,703 - rota.proxy_manager - WARNING - No healthy proxies found! The server may not function properly.
+2025-10-05 20:11:47,704 - rota.server - INFO - Proxy server started on 127.0.0.1:8081
+2025-10-05 20:11:47,704 - __main__ - INFO - Rota server started on 127.0.0.1:8081
+2025-10-05 20:11:47,705 - __main__ - INFO - Rotation strategy: RotationStrategy.RANDOM
+2025-10-05 20:11:47,705 - __main__ - INFO - Active proxies: 0/5
+2025-10-05 20:16:47,738 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 20:21:52,772 - rota.proxy_manager - INFO - Periodic health check status - Total: 5, Healthy: 0, Unhealthy: 5
+2025-10-05 20:21:52,781 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 20:23:56,221 - rota.server - INFO - code 501, message Unsupported method ('CONNECT')
+2025-10-05 20:23:56,221 - rota.server - INFO - "CONNECT httpbin.org:443 HTTP/1.1" 501 -
+2025-10-05 20:23:56,224 - rota.server - INFO - code 501, message Unsupported method ('CONNECT')
+2025-10-05 20:23:56,224 - rota.server - INFO - "CONNECT httpbin.org:443 HTTP/1.1" 501 -
+2025-10-05 20:23:57,226 - rota.server - INFO - code 501, message Unsupported method ('CONNECT')
+2025-10-05 20:23:57,226 - rota.server - INFO - "CONNECT httpbin.org:443 HTTP/1.1" 501 -
+2025-10-05 20:23:58,228 - rota.server - INFO - code 501, message Unsupported method ('CONNECT')
+2025-10-05 20:23:58,228 - rota.server - INFO - "CONNECT httpbin.org:443 HTTP/1.1" 501 -
+2025-10-05 20:26:57,819 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 20:32:02,847 - rota.proxy_manager - INFO - Periodic health check status - Total: 5, Healthy: 0, Unhealthy: 5
+2025-10-05 20:32:02,853 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 20:37:07,891 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 20:42:12,919 - rota.proxy_manager - INFO - Periodic health check status - Total: 5, Healthy: 0, Unhealthy: 5
+2025-10-05 20:42:12,926 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 20:47:17,963 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 20:52:22,991 - rota.proxy_manager - INFO - Periodic health check status - Total: 5, Healthy: 0, Unhealthy: 5
+2025-10-05 20:52:22,998 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 20:57:28,036 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 21:02:33,067 - rota.proxy_manager - INFO - Periodic health check status - Total: 5, Healthy: 0, Unhealthy: 5
+2025-10-05 21:02:33,074 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 21:07:38,110 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-05 21:09:29,411 - rota.proxy_manager - INFO - Loaded 23299 proxies from proxies.txt
+2025-10-05 21:09:29,412 - rota.proxy_manager - INFO - Starting comprehensive health check on all proxies...
+2025-10-05 21:11:04,113 - rota.proxy_manager - INFO - Proxy socks4://47.76.144.139:1080 is healthy (response time: 3.596s)
+2025-10-05 21:11:06,669 - rota.proxy_manager - INFO - Proxy socks4://98.175.31.195:4145 is healthy (response time: 0.890s)
+2025-10-05 21:12:11,923 - rota.proxy_manager - INFO - Proxy http://8.211.195.173:100 is healthy (response time: 6.249s)
+2025-10-05 21:12:15,511 - rota.proxy_manager - INFO - Proxy http://8.211.194.85:193 is healthy (response time: 3.479s)
+2025-10-05 21:12:16,156 - rota.proxy_manager - INFO - Proxy http://35.243.0.245:10080 is healthy (response time: 0.596s)
