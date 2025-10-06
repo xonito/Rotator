@@ -2,6 +2,9 @@ import os
 import sys
 import time
 from colorama import Fore, Style, init
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import requests
+from requests.exceptions import RequestException, Timeout, ConnectionError, ProxyError, SSLError
 
 # Inicializar colorama
 init()
@@ -90,9 +93,10 @@ def search_proxies_menu():
     print(f"\n{Fore.YELLOW}1.{Style.RESET_ALL} Buscar en GitHub")
     print(f"{Fore.YELLOW}2.{Style.RESET_ALL} Buscar en sitios web")
     print(f"{Fore.YELLOW}3.{Style.RESET_ALL} Búsqueda completa (GitHub + Web)")
-    print(f"{Fore.YELLOW}4.{Style.RESET_ALL} Volver al menú principal")
+    print(f"{Fore.YELLOW}4.{Style.RESET_ALL} Validar proxies encontrados")
+    print(f"{Fore.YELLOW}5.{Style.RESET_ALL} Volver al menú principal")
     
-    choice = input(f"\n{Fore.GREEN}👉 Selecciona una opción (1-4): {Style.RESET_ALL}")
+    choice = input(f"\n{Fore.GREEN}👉 Selecciona una opción (1-5): {Style.RESET_ALL}")
     
     if choice == "1":
         print(f"\n{Fore.GREEN}🚀 Iniciando búsqueda en GitHub...{Style.RESET_ALL}")
@@ -101,6 +105,16 @@ def search_proxies_menu():
             from Proxytron3000 import github_scraper
             proxies = github_scraper.scrape_github()
             print(f"\n{Fore.GREEN}✅ Búsqueda completada. Encontrados {len(proxies)} proxies.{Style.RESET_ALL}")
+            
+            # Preguntar si validar automáticamente
+            if proxies:
+                validate_choice = input(f"\n{Fore.YELLOW}🔍 ¿Validar proxies automáticamente? (s/n): {Style.RESET_ALL}").lower()
+                if validate_choice == 's':
+                    validate_and_save_proxies(proxies, "github_proxies.txt")
+                else:
+                    save_proxies(proxies, "github_proxies.txt")
+                    print(f"{Fore.YELLOW}📁 Proxies guardados en 'github_proxies.txt'{Style.RESET_ALL}")
+            
         except Exception as e:
             print(f"{Fore.RED}❌ Error: {e}{Style.RESET_ALL}")
         input(f"\n{Fore.YELLOW}⏎ Presiona Enter para continuar...{Style.RESET_ALL}")
@@ -112,6 +126,16 @@ def search_proxies_menu():
             from Proxytron3000 import web_scraper
             proxies = web_scraper.scrape_websites()
             print(f"\n{Fore.GREEN}✅ Búsqueda completada. Encontrados {len(proxies)} proxies.{Style.RESET_ALL}")
+            
+            # Preguntar si validar automáticamente
+            if proxies:
+                validate_choice = input(f"\n{Fore.YELLOW}🔍 ¿Validar proxies automáticamente? (s/n): {Style.RESET_ALL}").lower()
+                if validate_choice == 's':
+                    validate_and_save_proxies(proxies, "web_proxies.txt")
+                else:
+                    save_proxies(proxies, "web_proxies.txt")
+                    print(f"{Fore.YELLOW}📁 Proxies guardados en 'web_proxies.txt'{Style.RESET_ALL}")
+            
         except Exception as e:
             print(f"{Fore.RED}❌ Error: {e}{Style.RESET_ALL}")
         input(f"\n{Fore.YELLOW}⏎ Presiona Enter para continuar...{Style.RESET_ALL}")
@@ -127,6 +151,9 @@ def search_proxies_menu():
         input(f"\n{Fore.YELLOW}⏎ Presiona Enter para continuar...{Style.RESET_ALL}")
         
     elif choice == "4":
+        validate_existing_proxies_menu()
+        
+    elif choice == "5":
         return
     else:
         print(f"\n{Fore.RED}❌ Opción no válida.{Style.RESET_ALL}")
@@ -532,6 +559,100 @@ def help_menu():
     """Menú de ayuda"""
     print(f"\n{Fore.YELLOW}⚠️  Menú de ayuda en desarrollo{Style.RESET_ALL}")
     input(f"\n{Fore.YELLOW}⏎ Presiona Enter para continuar...{Style.RESET_ALL}")
+
+# Funciones auxiliares para manejo de proxies
+def save_proxies(proxies, filename):
+    """Guarda una lista de proxies en un archivo"""
+    try:
+        with open(filename, 'w') as f:
+            for proxy in proxies:
+                f.write(proxy + '\n')
+        return True
+    except Exception as e:
+        print(f"{Fore.RED}❌ Error al guardar proxies: {e}{Style.RESET_ALL}")
+        return False
+
+def merge_with_existing(new_proxies):
+    """Fusiona nuevos proxies con los existentes en proxies.txt"""
+    try:
+        existing_proxies = set()
+        
+        # Leer proxies existentes
+        try:
+            with open("proxies.txt", 'r') as f:
+                existing_proxies = set(line.strip() for line in f if line.strip())
+        except FileNotFoundError:
+            existing_proxies = set()
+        
+        # Combinar con nuevos proxies
+        all_proxies = existing_proxies.union(set(new_proxies))
+        
+        # Guardar de vuelta
+        with open("proxies.txt", 'w') as f:
+            for proxy in all_proxies:
+                f.write(proxy + '\n')
+        
+        print(f"{Fore.GREEN}✅ Fusionados {len(new_proxies)} nuevos proxies")
+        print(f"📊 Total de proxies únicos: {len(all_proxies)}{Style.RESET_ALL}")
+        
+    except Exception as e:
+        print(f"{Fore.RED}❌ Error al fusionar proxies: {e}{Style.RESET_ALL}")
+
+def validate_and_save_proxies(proxies, filename):
+    """Valida proxies usando Proxytron3000 y los guarda en archivo"""
+    print(f"\n{Fore.BLUE}🔍 Validando {len(proxies)} proxies con Proxytron3000...{Style.RESET_ALL}")
+    print(f"{Fore.YELLOW}⚠️  Validando en lotes de mínimo 25 proxies...{Style.RESET_ALL}")
+    
+    # Importar el validador de Proxytron3000
+    try:
+        from Proxytron3000.validator import validate_proxies_batch, filter_valid_proxies, get_validation_stats
+    except ImportError:
+        print(f"{Fore.RED}❌ Error: No se pudo importar Proxytron3000{Style.RESET_ALL}")
+        return
+    
+    # Validar en lotes de mínimo 25
+    batch_size = max(25, min(50, len(proxies) // 10))  # Mínimo 25, máximo 50 o 10% del total
+    valid_proxies = []
+    
+    for i in range(0, len(proxies), batch_size):
+        batch = proxies[i:i + batch_size]
+        print(f"\n{Fore.CYAN}📦 Procesando lote {i//batch_size + 1}/{(len(proxies)-1)//batch_size + 1} ({len(batch)} proxies){Style.RESET_ALL}")
+        
+        # Validar el lote actual
+        validation_results = validate_proxies_batch(
+            batch, 
+            max_workers=15,
+            test_url="http://httpbin.org/ip",
+            timeout=10
+        )
+        
+        # Obtener estadísticas del lote
+        stats = get_validation_stats(validation_results)
+        batch_valid = filter_valid_proxies(validation_results)
+        valid_proxies.extend(batch_valid)
+        
+        print(f"{Fore.GREEN}✅ Lote completado: {len(batch_valid)}/{len(batch)} válidos ({stats['success_rate']:.1f}%){Style.RESET_ALL}")
+    
+    # Guardar todos los proxies válidos
+    if valid_proxies:
+        save_proxies(valid_proxies, filename)
+        
+        # Mostrar estadísticas finales
+        final_stats = get_validation_stats(
+            {proxy: {'valid': True, 'response_time': 0, 'protocol': 'http'} for proxy in valid_proxies}
+        )
+        
+        print(f"\n{Fore.GREEN}🎉 Validación completada con Proxytron3000!")
+        print(f"📊 Total válidos: {len(valid_proxies)}/{len(proxies)} ({final_stats['success_rate']:.2f}%)")
+        print(f"📁 Guardados en: {filename}{Style.RESET_ALL}")
+        
+        # Preguntar si fusionar con proxies.txt
+        merge_choice = input(f"\n{Fore.YELLOW}🔄 ¿Fusionar con proxies.txt? (s/n): {Style.RESET_ALL}").lower()
+        if merge_choice == 's':
+            merge_with_existing(valid_proxies)
+    else:
+        print(f"\n{Fore.RED}❌ No se encontraron proxies válidos{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}💡 Esto es normal con proxies públicos. Intenta con más proxies o fuentes diferentes.{Style.RESET_ALL}")
 
 if __name__ == "__main__":
     try:

@@ -103,3 +103,107 @@
 2025-10-05 21:12:15,511 - rota.proxy_manager - INFO - Proxy http://8.211.194.85:193 is healthy (response time: 3.479s)
 2025-10-05 21:12:16,156 - rota.proxy_manager - INFO - Proxy http://35.243.0.245:10080 is healthy (response time: 0.596s)
 2025-10-05 21:23:04,692 - rota.proxy_manager - INFO - Proxy socks4://142.54.237.34:4145 is healthy (response time: 0.702s)
+2025-10-06 11:27:42,173 - rota.proxy_manager - INFO - Loaded 23299 proxies from proxies.txt
+2025-10-06 11:27:42,173 - rota.proxy_manager - INFO - Starting comprehensive health check on all proxies...
+2025-10-06 11:27:46,960 - rota.proxy_manager - INFO - Proxy http://8.211.195.173:100 is healthy (response time: 4.614s)
+2025-10-06 11:27:48,312 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:27:48,312 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:27:48,313 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://8.211.194.85:193: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:27:51,281 - rota.proxy_manager - INFO - Proxy http://35.243.0.245:10080 is healthy (response time: 2.966s)
+2025-10-06 11:27:53,997 - rota.proxy_manager - INFO - Proxy http://8.212.168.170:623 is healthy (response time: 2.637s)
+2025-10-06 11:27:55,550 - rota.proxy_manager - INFO - Proxy http://92.67.186.210:80 is healthy (response time: 1.476s)
+2025-10-06 11:28:00,911 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:00,912 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:00,912 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://35.243.0.243:10027: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:01,451 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:01,451 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:01,451 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://8.213.151.128:3128: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:01,676 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:01,676 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:01,676 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://39.102.214.152:6379: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:01,878 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:01,878 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:01,878 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://43.153.100.9:8888: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:02,081 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:02,081 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:02,081 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://39.102.209.163:8090: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:02,250 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:02,251 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:02,251 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://8.130.36.245:8080: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:02,453 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:02,453 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:02,453 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://35.243.0.245:10003: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:02,633 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:02,633 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:02,633 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://8.220.205.172:9000: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:02,844 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:02,845 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:02,845 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://35.243.0.213:80: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:03,020 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:03,020 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:03,020 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://47.251.87.199:2083: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:03,219 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:03,220 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:03,220 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://8.130.34.237:5555: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:03,404 - root - INFO - Received signal 2, shutting down...
+2025-10-06 11:28:03,404 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:28:03,404 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://8.213.197.208:8443: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:28:06,073 - rota.proxy_manager - INFO - Proxy http://149.129.255.179:119 is healthy (response time: 2.474s)
+2025-10-06 11:28:27,358 - rota.proxy_manager - INFO - Health check progress: 10.0% (2329/23299)
+2025-10-06 11:30:11,253 - rota.proxy_manager - INFO - Health check progress: 20.0% (4658/23299)
+2025-10-06 11:31:02,474 - rota.proxy_manager - INFO - Proxy http://8.213.134.213:1081 is healthy (response time: 2.647s)
+2025-10-06 11:32:24,188 - root - INFO - Received signal 15, shutting down...
+2025-10-06 11:32:24,189 - __main__ - INFO - Shutting down Rota...
+2025-10-06 11:32:24,189 - rota.proxy_manager - WARNING - Unexpected error checking proxy http://35.243.0.243:10020: 'ProxyManager' object has no attribute 'stop'
+2025-10-06 11:32:36,632 - rota.proxy_manager - INFO - Health check progress: 30.0% (6987/23299)
+2025-10-06 11:35:00,989 - rota.proxy_manager - INFO - Proxy http://8.213.222.157:312 is healthy (response time: 3.948s)
+2025-10-06 11:35:04,991 - rota.proxy_manager - INFO - Proxy http://8.210.17.35:8004 is healthy (response time: 3.961s)
+2025-10-06 11:35:42,831 - rota.proxy_manager - INFO - Health check progress: 40.0% (9316/23299)
+2025-10-06 11:37:01,891 - rota.proxy_manager - INFO - Proxy http://113.11.32.198:16464 is healthy (response time: 3.875s)
+2025-10-06 11:37:31,538 - rota.proxy_manager - INFO - Health check progress: 50.0% (11645/23299)
+2025-10-06 11:39:01,086 - rota.proxy_manager - INFO - Proxy http://8.211.200.183:10002 is healthy (response time: 7.532s)
+2025-10-06 11:39:03,546 - rota.proxy_manager - INFO - Proxy http://106.14.91.83:8008 is healthy (response time: 2.426s)
+2025-10-06 11:39:28,781 - rota.proxy_manager - INFO - Health check progress: 60.0% (13974/23299)
+2025-10-06 11:41:00,006 - rota.proxy_manager - INFO - Proxy http://8.213.197.208:443 is healthy (response time: 2.711s)
+2025-10-06 11:41:33,470 - rota.proxy_manager - INFO - Health check progress: 70.0% (16303/23299)
+2025-10-06 11:43:28,003 - rota.proxy_manager - INFO - Health check progress: 80.0% (18632/23299)
+2025-10-06 11:44:03,961 - rota.proxy_manager - INFO - Proxy http://47.90.167.27:8008 is healthy (response time: 2.273s)
+2025-10-06 11:45:00,767 - rota.proxy_manager - INFO - Proxy http://47.91.89.3:1000 is healthy (response time: 2.172s)
+2025-10-06 11:45:16,467 - rota.proxy_manager - INFO - Health check progress: 90.0% (20961/23299)
+2025-10-06 11:47:46,995 - rota.proxy_manager - INFO - Health check progress: 100.0% (23290/23299)
+2025-10-06 11:47:47,019 - rota.proxy_manager - INFO - Health check progress: 100.0% (23299/23299)
+2025-10-06 11:47:47,019 - rota.proxy_manager - INFO - Comprehensive health check completed. 124/23299 proxies healthy
+2025-10-06 11:47:47,031 - rota.server - INFO - Proxy server started on 127.0.0.1:8080
+2025-10-06 11:47:47,031 - __main__ - INFO - Rota server started on 127.0.0.1:8080
+2025-10-06 11:47:47,031 - __main__ - INFO - Rotation strategy: RotationStrategy.RANDOM
+2025-10-06 11:47:47,031 - __main__ - INFO - Active proxies: 124/23299
+2025-10-06 11:53:10,391 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 11:58:19,346 - rota.proxy_manager - INFO - Periodic health check status - Total: 23299, Healthy: 124, Unhealthy: 23175
+2025-10-06 11:58:21,979 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:03:55,081 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:05:02,566 - rota.proxy_manager - INFO - Proxy http://8.130.34.237:5555 is healthy (response time: 2.438s)
+2025-10-06 12:09:08,109 - rota.proxy_manager - INFO - Periodic health check status - Total: 23299, Healthy: 130, Unhealthy: 23169
+2025-10-06 12:09:11,933 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:14:35,884 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:18:00,081 - rota.proxy_manager - INFO - Proxy http://191.252.204.220:8080 is healthy (response time: 3.339s)
+2025-10-06 12:20:00,254 - rota.proxy_manager - INFO - Periodic health check status - Total: 23299, Healthy: 130, Unhealthy: 23169
+2025-10-06 12:20:02,804 - rota.proxy_manager - INFO - Proxy http://8.130.34.237:1234 is healthy (response time: 2.403s)
+2025-10-06 12:20:16,364 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:25:37,334 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:31:07,158 - rota.proxy_manager - INFO - Periodic health check status - Total: 23299, Healthy: 128, Unhealthy: 23171
+2025-10-06 12:31:07,231 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:36:15,987 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:41:51,295 - rota.proxy_manager - INFO - Periodic health check status - Total: 23299, Healthy: 130, Unhealthy: 23169
+2025-10-06 12:41:51,372 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:47:09,064 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:52:02,480 - rota.proxy_manager - INFO - Proxy http://8.213.134.213:1081 is healthy (response time: 2.647s)
+2025-10-06 12:53:02,492 - rota.proxy_manager - INFO - Periodic health check status - Total: 23299, Healthy: 126, Unhealthy: 23173
+2025-10-06 12:53:03,586 - rota.proxy_manager - INFO - Proxy http://35.243.0.243:10050 is healthy (response time: 1.073s)
+2025-10-06 12:53:03,638 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 12:58:42,024 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 13:04:27,776 - rota.proxy_manager - INFO - Periodic health check status - Total: 23299, Healthy: 130, Unhealthy: 23169
+2025-10-06 13:04:27,876 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 13:09:53,720 - rota.proxy_manager - ERROR - Health check loop error: 'Config' object has no attribute 'proxy_max_age'
+2025-10-06 13:10:24,245 - root - INFO - Received signal 15, shutting down...
+2025-10-06 13:10:24,246 - __main__ - INFO - Shutting down Rota...
+2025-10-06 13:10:24,247 - __main__ - ERROR - Failed to start Rota: 'ProxyServer' object has no attribute 'shutdown'
